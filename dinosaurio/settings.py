@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dino_manager.apps.DinoManagerConfig'
+    'dino_manager.apps.DinoManagerConfig', # <-- add new app
+    'rest_framework', # <- install DRF
 ]
 
 MIDDLEWARE = [

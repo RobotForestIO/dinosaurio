@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from .models import Dinosaur
+from .serializers import DinosaurSerializer
+from rest_framework import generics
 
-# Create your views here.
+
+class DinosaurListCreate(generics.ListCreateAPIView):
+    queryset = Dinosaur.objects.all()
+    serializer_class = DinosaurSerializer

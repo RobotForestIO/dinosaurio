@@ -4,6 +4,10 @@
   "description": "DinosaurIO frontend",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack --mode development ./src/index.js --output ./static/frontend/main.js",
+    "build": "webpack --mode production ./src/index.js --output ./static/frontend/main.js"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/plugin-proposal-decorators": "^7.10.5",

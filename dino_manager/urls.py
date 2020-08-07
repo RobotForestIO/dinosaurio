@@ -1,6 +1,7 @@
-from django.urls import path
+from rest_framework.routers import DefaultRouter
 from . import views
 
-urlpatterns = [
-    path('api/v1/dinosaurs/', views.DinosaurListCreate.as_view()),
-]
+router = DefaultRouter()
+router.register(r'dinosaurs', views.DinosaurModelViewSet, basename='dinosaurs')
+
+urlpatterns = router.urls

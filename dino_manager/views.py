@@ -1,8 +1,8 @@
+from rest_framework.viewsets import ModelViewSet
 from .models import Dinosaur
 from .serializers import DinosaurSerializer
-from rest_framework import generics
 
 
-class DinosaurListCreate(generics.ListCreateAPIView):
+class DinosaurModelViewSet(ModelViewSet):
     queryset = Dinosaur.objects.all()
     serializer_class = DinosaurSerializer

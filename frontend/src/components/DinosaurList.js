@@ -9,7 +9,6 @@ class DinosaurList extends Component {
         };
     }
     componentDidMount() {
-        // this._getDinosaurs();
         fetch('/api/v1/dinosaurs/')
             .then(res => res.json())
             .then(dinosaurs => {
